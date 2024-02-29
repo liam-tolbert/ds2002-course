@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#https://ds2002-lct4am.s3.us-east-1.amazonaws.com/crying.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA3FLD5C6KKFXMT5A5%2F20240229%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240229T213849Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Security-Token=FwoGZXIvYXdzEDcaDB8ZaMjNuFawoQBpdCLEATXjQtfKi0Eaig6xiWiRRjfw%2FIf5lQuU2cBtCxmfiAUOX2mqhTfynnp8u6EINcdn73sZ%2BTZ2xO%2FdbUgg%2FJyJ5CDx4%2FDUdRCptKVGQ6y5IwGQdkFOLWUVi54Rdz0lfH6Jzek86juGnzGspLGiby8smL6Hvtwi1AezPzHx3DSpgUtzaSQC8CCBF7bAxgHrO3Ms5%2B1dhzHiZROxouAEeEEVnY5spDSJK%2BeG7v%2BVfzhSNfa0PtA7Pggcc6g%2FebESlDY08g2NkA4otemDrwYyLTsDtCHY%2FcXmXMlasZnAXonEIWEezSOgi89t827pc7mpm7UWuJACllcNYbxkrg%3D%3D&X-Amz-Signature=b1c05a4864e1252dccd2f1007dd4f2b310184b3940811b1b680ca425c36f83fa
+aws s3 cp crying.jpg s3://ds2002-lct4am/
+aws s3 presign --expires-in 604800 s3://ds2002-lct4am/crying.jpg
